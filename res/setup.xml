@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Setup>
+ <Server IPAddr="127.0.0.1" Port="13762"/>
+</Setup>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window size="1024,30" sizebox="0,0,0,0" mininfo="100,20" maxinfo="2048,50" roundcorner="0,0" caption="0,0,0,0">
+	<Font id="1000" name="微软雅黑" size="10" bold="false" shared="true"/>
+	<Font id="1001" name="微软雅黑" size="10" bold="true" shared="true"/>
+	<Font id="1010" name="黑体" size="10" bold="false" shared="true"/>
+	<Font id="1011" name="黑体" size="10" bold="true" shared="true"/>
+	<Font id="1100" name="微软雅黑" size="11" bold="false" shared="true"/>
+	<Font id="1101" name="微软雅黑" size="11" bold="true" shared="true"/>
+	<Font id="1200" name="微软雅黑" size="12" bold="false" shared="true"/>
+	<Font id="1201" name="微软雅黑" size="12" bold="true" shared="true"/>
+	<Font id="1210" name="黑体" size="12" bold="false" shared="true"/>
+	<Font id="1211" name="黑体" size="12" bold="true" shared="true"/>
+	
+	<VerticalLayout bkcolor="#FF2196F4" bordercolor="#FFFFFFFF" bordersize="0" borderround="0,0" inset="0,0,0,0">	
+		<HorizontalLayout>
+			<Button name="32986A9F93F0" 
+			width="24" 
+			height="24" 
+			padding="10,3,0,0" 
+			normalimage="file='images/btn_activate_downmanager_normal.png' source='0,0,24,24' dest='0,0,0,0'" 
+			hotimage="file='images/btn_activate_downmanager_hot.png' source='0,0,24,24' dest='0,0,0,0'" 
+			pushedimage="file='images/btn_activate_downmanager_pushed.png' source='0,0,24,24' dest='0,0,0,0'"/>		
+			
+			<Control width="10"/>
+			
+			<Label name="7C9745D4E9BD" width="48" padding="0,1,0,0" text="游戏下载" font="1200" textcolor="#FFFFFFFF" align="left" padding="0,0,0,0"/>
+						
+			<HorizontalLayout>
+				<Progress
+				name="D73AF13A8F49" 
+				bordercolor="#FFFFFFFF" bordersize="1"
+				width="300" 
+				height="14" 
+				borderround="7,7"
+				padding="10,13,0,0" 
+				bkimage="file='images/progress.png' source='3,11,5,13'" 
+				foreimage="file='images/progress.png' source='3,3,5,5'" 
+				min="0" max="10000" value="0"/>
+				
+				<Button
+				name="FE58908224CC" float="true" pos="300,5,314,19" bkcolor="#FFFFFFFF" text="0" font="1001" textcolor="#FF666666" borderround="10,10"/>
+			</HorizontalLayout>
+		</HorizontalLayout>	
+	</VerticalLayout>	
+</Window>

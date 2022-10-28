@@ -1,0 +1,422 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window size="1171,681" sizebox="0,0,0,0" mininfo="1171,681" maxinfo="1171,892" roundcorner="0,0" caption="0,0,0,50">
+	<Font id="1100" name="微软雅黑" size="11" bold="false" shared="true"/>
+	<Font id="1101" name="微软雅黑" size="11" bold="true" shared="true"/>
+	<Font id="1200" name="微软雅黑" size="12" bold="false" shared="true"/>
+	<Font id="1201" name="微软雅黑" size="12" bold="true" shared="true"/>
+	<Font id="1210" name="黑体" size="12" bold="false" shared="true"/>
+	<Font id="1211" name="黑体" size="12" bold="true" shared="true"/>
+	<Font id="1250" name="黑体" size="12" bold="false" shared="false"/>
+	<Font id="1251" name="黑体" size="12" bold="true" shared="false"/>
+	<Font id="1400" name="微软雅黑" size="14" bold="false" shared="true"/>
+	<Font id="1401" name="微软雅黑" size="14" bold="true" shared="true"/>
+	<Font id="1410" name="黑体" size="14" bold="false" shared="true"/>
+	<Font id="1411" name="黑体" size="14" bold="true" shared="true"/>
+	<Font id="1500" name="微软雅黑" size="15" bold="false" shared="true"/>
+	<Font id="1501" name="微软雅黑" size="15" bold="true" shared="true"/>
+	<Font id="1600" name="微软雅黑" size="16" bold="false" shared="true"/>
+	<Font id="1601" name="微软雅黑" size="16" bold="true" shared="true"/>
+	<Font id="1610" name="黑体" size="16" bold="false" shared="true"/>
+	<Font id="1611" name="黑体" size="16" bold="true" shared="true"/>
+	<Font id="1700" name="微软雅黑" size="17" bold="false" shared="true"/>
+	<Font id="1701" name="微软雅黑" size="17" bold="true" shared="true"/>
+	<Font id="1800" name="微软雅黑" size="18" bold="false" shared="true"/>
+	<Font id="1801" name="微软雅黑" size="18" bold="true" shared="true"/>
+	<Font id="2000" name="微软雅黑" size="20" bold="false" shared="true"/>
+	<Font id="2001" name="微软雅黑" size="20" bold="true" shared="true"/>
+	<Font id="2010" name="黑体" size="20" bold="false" shared="true"/>
+	<Font id="2011" name="黑体" size="20" bold="true" shared="true"/>
+	<Font id="3400" name="微软雅黑 Light" size="34" bold="false" shared="true"/>
+	<Font id="3401" name="微软雅黑 Light" size="34" bold="true" shared="true"/>
+
+	<Default shared="true" name="VScrollBar" value="button1normalimage=&quot;file='images/scrollbar.bmp' source='0,90,16,106' mask='#FFFF00FF'&quot; button1hotimage=&quot;file='images/scrollbar.bmp' source='18,90,34,106' mask='#FFFF00FF'&quot; button1pushedimage=&quot;file='images/scrollbar.bmp' source='36,90,52,106' mask='#FFFF00FF'&quot; button1disabledimage=&quot;file='images/scrollbar.bmp' source='54,90,70,106' mask='#FFFF00FF'&quot; button2normalimage=&quot;file='images/scrollbar.bmp' source='0,108,16,124' mask='#FFFF00FF'&quot; button2hotimage=&quot;file='images/scrollbar.bmp' source='18,108,34,124' mask='#FFFF00FF'&quot; button2pushedimage=&quot;file='images/scrollbar.bmp' source='36,108,52,124' mask='#FFFF00FF'&quot; button2disabledimage=&quot;file='images/scrollbar.bmp' source='54,108,70,124' mask='#FFFF00FF'&quot; thumbnormalimage=&quot;file='images/scrollbar.bmp' source='0,126,16,142' corner='2,2,2,2' mask='#FFFF00FF'&quot; thumbhotimage=&quot;file='images/scrollbar.bmp' source='18,126,34,142' corner='2,2,2,2' mask='#FFFF00FF'&quot; thumbpushedimage=&quot;file='images/scrollbar.bmp' source='36,126,52,142' corner='2,2,2,2' mask='#FFFF00FF'&quot; thumbdisabledimage=&quot;file='images/scrollbar.bmp' source='54,126,70,142' corner='2,2,2,2' mask='#FFFF00FF'&quot; railnormalimage=&quot;file='images/scrollbar.bmp' source='0,144,16,160' corner='2,2,2,2' mask='#FFFF00FF'&quot; railhotimage=&quot;file='images/scrollbar.bmp' source='18,144,34,160' corner='2,2,2,2' mask='#FFFF00FF'&quot; railpushedimage=&quot;file='images/scrollbar.bmp' source='36,144,52,160' corner='2,2,2,2' mask='#FFFF00FF'&quot; raildisabledimage=&quot;file='images/scrollbar.bmp' source='54,144,70,160' corner='2,2,2,2' mask='#FFFF00FF'&quot; bknormalimage=&quot;file='images/scrollbar.bmp' source='0,162,16,178' corner='2,2,2,2' mask='#FFFF00FF'&quot; bkhotimage=&quot;file='images/scrollbar.bmp' source='18,162,34,178' corner='2,2,2,2' mask='#FFFF00FF'&quot; bkpushedimage=&quot;file='images/scrollbar.bmp' source='36,162,52,178' corner='2,2,2,2' mask='#FFFF00FF'&quot; bkdisabledimage=&quot;file='images/scrollbar.bmp' source='54,162,70,178' corner='2,2,2,2' mask='#FFFF00FF'&quot; " />
+	<Default shared="true" name="HScrollBar" value="button1normalimage=&quot;file='images/scrollbar.bmp' source='0,0,16,16' mask='#FFFF00FF'&quot; button1hotimage=&quot;file='images/scrollbar.bmp' source='18,0,34,16' mask='#FFFF00FF'&quot; button1pushedimage=&quot;file='images/scrollbar.bmp' source='36,0,52,16' mask='#FFFF00FF'&quot; button1disabledimage=&quot;file='images/scrollbar.bmp' source='54,0,70,16' mask='#FFFF00FF'&quot; button2normalimage=&quot;file='images/scrollbar.bmp' source='0,18,16,34' mask='#FFFF00FF'&quot; button2hotimage=&quot;file='images/scrollbar.bmp' source='18,18,34,34' mask='#FFFF00FF'&quot; button2pushedimage=&quot;file='images/scrollbar.bmp' source='36,18,52,34' mask='#FFFF00FF'&quot; button2disabledimage=&quot;file='images/scrollbar.bmp' source='54,18,70,34' mask='#FFFF00FF'&quot; thumbnormalimage=&quot;file='images/scrollbar.bmp' source='0,36,16,52' corner='2,2,2,2' mask='#FFFF00FF'&quot; thumbhotimage=&quot;file='images/scrollbar.bmp' source='18,36,34,52' corner='2,2,2,2' mask='#FFFF00FF'&quot; thumbpushedimage=&quot;file='images/scrollbar.bmp' source='36,36,52,52' corner='2,2,2,2' mask='#FFFF00FF'&quot; thumbdisabledimage=&quot;file='images/scrollbar.bmp' source='54,36,70,52' corner='2,2,2,2' mask='#FFFF00FF'&quot; railnormalimage=&quot;file='images/scrollbar.bmp' source='0,54,16,70' corner='2,2,2,2' mask='#FFFF00FF'&quot; railhotimage=&quot;file='images/scrollbar.bmp' source='18,54,34,70' corner='2,2,2,2' mask='#FFFF00FF'&quot; railpushedimage=&quot;file='images/scrollbar.bmp' source='36,54,52,70' corner='2,2,2,2' mask='#FFFF00FF'&quot; raildisabledimage=&quot;file='images/scrollbar.bmp' source='54,54,70,70' corner='2,2,2,2' mask='#FFFF00FF'&quot; bknormalimage=&quot;file='images/scrollbar.bmp' source='0,72,16,88' corner='2,2,2,2' mask='#FFFF00FF'&quot; bkhotimage=&quot;file='images/scrollbar.bmp' source='18,72,34,88' corner='2,2,2,2' mask='#FFFF00FF'&quot; bkpushedimage=&quot;file='images/scrollbar.bmp' source='36,72,52,88' corner='2,2,2,2' mask='#FFFF00FF'&quot; bkdisabledimage=&quot;file='images/scrollbar.bmp' source='54,72,70,88' corner='2,2,2,2' mask='#FFFF00FF'&quot; " />
+	
+	<VerticalLayout bkcolor="#FF081018" bordercolor="#FF68217A" bordersize="0" borderround="0,0" inset="1,1,1,1">
+		<HorizontalLayout bkcolor="#FF101822" height="50">
+			<Label padding="41,11,0,0" width="83" height="28" name="4389287E74E2" text="系统设置" font="2011" textcolor="#FFFFFFFF" align="left"/>
+			<Control/>
+			<Button name="0D641E9F6F01" width="16" height="16" padding="0,11,11,0" bkimage="images/btn_dwon_system_close.png"/>
+		</HorizontalLayout>		
+			
+		<VerticalLayout padding="40,11,40,34">			
+			<HorizontalLayout height="44" bkcolor="#FF1D1F24">
+				<Option 
+				name="C4E9B2C7DCB0" group="12DEE092BBF3" 
+				padding="0,0,0,0" width="114" 
+				text="常规" 
+				font="1600" 
+				textcolor="#FFFFFFFF" 
+				selectedimage="images\system_configure_option_selected.png"
+				/>
+
+				<Option 
+				name="F38DA89C0E8B" group="12DEE092BBF3" 
+				padding="0,0,0,0" width="114" 
+				text="下载" 
+				font="1600" 
+				textcolor="#FFFFFFFF" 
+				selectedimage="images\system_configure_option_selected.png" 
+				/>
+			</HorizontalLayout>
+
+			<Control height="10"/>
+			
+			<TabLayout name="B78751250524">
+				<VerticalLayout>
+					<VerticalLayout height="162" bkcolor="#FF1D1F24">
+						<Control/>
+						<HorizontalLayout>
+							<Label padding="25,0,0,0" text="启动设置 :" font="1600" textcolor="#FFFFFFFF" align="left"/>
+							<Control/>				
+						</HorizontalLayout>
+						<Control/>
+						<HorizontalLayout>
+							<Label padding="25,0,0,0" text="开机时自动启动客户端" font="1600" textcolor="#FFFFFFFF" align="left"/>													
+							<Option 
+							selected="false"
+							name="617CC729EE3A" 
+							padding="0,0,80,0"
+							width="62" 
+							height="20"
+							normalimage="file='images\system_configure_option_node.png' source='0,0,62,20' dest='0,0,0,0'"
+							selectedimage="file='images\system_configure_option_node.png' source='0,20,62,40' dest='0,0,0,0'"/>
+							
+						</HorizontalLayout>
+						<Control/>
+						<HorizontalLayout>
+							<Label padding="25,0,0,0" text="启动时自动下载上次未完成的下载" font="1600" textcolor="#FFFFFFFF" align="left"/>
+							
+							<Option 
+							selected="false"
+							name="739D036A420E" 
+							padding="0,0,80,0"
+							width="62" 
+							height="20"
+							normalimage="file='images\system_configure_option_node.png' source='0,0,62,20' dest='0,0,0,0'"
+							selectedimage="file='images\system_configure_option_node.png' source='0,20,62,40' dest='0,0,0,0'"/>
+							
+						</HorizontalLayout>	
+						<Control/>
+					</VerticalLayout>
+					
+					<Control height="10"/>
+					
+					<VerticalLayout height="162" bkcolor="#FF1D1F24">
+						<Control/>
+						<HorizontalLayout>
+							<Label padding="25,0,0,0" text="其它设置 :" font="1600" textcolor="#FFFFFFFF" align="left"/>
+							<Control/>
+						</HorizontalLayout>
+						<Control/>
+						<HorizontalLayout>
+							<Label padding="25,0,0,0" text="下载完成后自动安装游戏" font="1600" textcolor="#FFFFFFFF" align="left"/>
+							
+							<Option 
+							selected="false"
+							name="ED35F19D6183" 
+							padding="0,0,80,0"
+							width="62" 
+							height="20"
+							normalimage="file='images\system_configure_option_node.png' source='0,0,62,20' dest='0,0,0,0'"
+							selectedimage="file='images\system_configure_option_node.png' source='0,20,62,40' dest='0,0,0,0'"/>
+							
+						</HorizontalLayout>
+						<Control/>
+						<HorizontalLayout>
+							<Label padding="25,0,0,0" text="打开后不显示推广广告" font="1600" textcolor="#FFFFFFFF" align="left"/>
+							
+							<Option 
+							selected="false"
+							name="94FCF44F7104" 
+							padding="0,0,80,0"
+							width="62" 
+							height="20"
+							normalimage="file='images\system_configure_option_node.png' source='0,0,62,20' dest='0,0,0,0'"
+							selectedimage="file='images\system_configure_option_node.png' source='0,20,62,40' dest='0,0,0,0'"/>
+							
+						</HorizontalLayout>	
+						<Control/>
+					</VerticalLayout>
+					
+					<Control height="10"/>
+					
+					<VerticalLayout height="188" bkcolor="#FF1D1F24">
+						<Control/>
+						<HorizontalLayout>
+							<Label padding="25,0,0,0" text="点击关闭按钮时 :" font="1600" textcolor="#FFFFFFFF" align="left"/>
+							<Control/>
+						</HorizontalLayout>
+						<Control/>
+						<HorizontalLayout>
+							<Label padding="25,0,0,0" text="每次关闭时不再提醒我" font="1600" textcolor="#FFFFFFFF" align="left"/>
+							
+							<Option 
+							selected="false"
+							name="5B405FA829F4" 
+							padding="0,0,80,0"
+							width="62" 
+							height="20"
+							normalimage="file='images\system_configure_option_node.png' source='0,0,62,20' dest='0,0,0,0'"
+							selectedimage="file='images\system_configure_option_node.png' source='0,20,62,40' dest='0,0,0,0'"/>
+							
+						</HorizontalLayout>
+						<Control/>
+						<HorizontalLayout>
+							<Label padding="25,0,0,0" text="最小化到系统托盘区" font="1600" textcolor="#FFFFFFFF" align="left"/>
+							
+							<Option 
+							selected="false"
+							name="DADB6C99850F" 
+							padding="0,0,80,0"			
+							width="62" 
+							height="20"
+							normalimage="file='images\system_configure_option_node.png' source='0,0,62,20' dest='0,0,0,0'"
+							selectedimage="file='images\system_configure_option_node.png' source='0,20,62,40' dest='0,0,0,0'"/>
+							
+						</HorizontalLayout>	
+						<Control/>
+						<HorizontalLayout>
+							<Label padding="25,0,0,0" text="退出程序" font="1600" textcolor="#FFFFFFFF" align="left"/>
+							
+							<Option 
+							selected="false"
+							name="B028F5B3C490" 
+							padding="0,0,80,0"							
+							width="62" 
+							height="20"
+							normalimage="file='images\system_configure_option_node.png' source='0,0,62,20' dest='0,0,0,0'"
+							selectedimage="file='images\system_configure_option_node.png' source='0,20,62,40' dest='0,0,0,0'"/>
+							
+						</HorizontalLayout>	
+						<Control/>
+					</VerticalLayout>
+					
+				</VerticalLayout>
+
+				<VerticalLayout>
+				
+					<VerticalLayout bkcolor="#FF1D1F24" height="230">				
+						<VerticalLayout padding="25,22,0,0" >
+							<Label text="安装包存储路径 :" font="1600" height="22" textcolor="#FFFFFFFF" align="left"/>		
+							<Control height="20"/>
+							<HorizontalLayout width="980" height="42" >
+								<Edit name="E6EB916CD8D1" borderround="5,5" font="1410" align="left" textpadding="14,0,150,0" nativebkcolor="#FF1D1F24" bkcolor="#FF1D1F24" textcolor="#FFFFFFFF" bordersize="1" bordercolor="FF979797"/>							
+								<Button 
+								float="true"
+								pos="846,0,980,42"
+								name="43EDDF54B1B9" 
+								text="浏览" font="1610" borderround="5,5" 
+								textcolor="#FFFFFFFF" bkcolor="#FF80BD04"/>
+							</HorizontalLayout>
+							
+							<Control height="16"/>	
+							
+							<Label text="安装路径 :" font="1600" height="22" textcolor="#FFFFFFFF" align="left"/>			
+							<Control height="20"/>				
+							<HorizontalLayout width="980" height="42" >
+								<Edit name="F95EA9059591" borderround="5,5" font="1410" align="left" textpadding="14,0,150,0" nativebkcolor="#FF1D1F24" bkcolor="#FF1D1F24" textcolor="#FFFFFFFF" bordersize="1" bordercolor="FF979797"/>							
+								<Button 
+								float="true"
+								pos="846,0,980,42"
+								name="0B83DAA3DCAA" 
+								text="浏览" font="1610" borderround="5,5" 
+								textcolor="#FFFFFFFF" bkcolor="#FF80BD04"/>
+							</HorizontalLayout>
+						</VerticalLayout>
+					</VerticalLayout>
+
+					<Control height="10"/>
+					
+					<VerticalLayout bkcolor="#FF1D1F24" height="162">		
+						<Control/>
+						<HorizontalLayout>
+							<Label padding="25,0,0,0" text="下载速度限制 :" font="1600" textcolor="#FFFFFFFF" align="left"/>
+							
+							<Control/>
+						</HorizontalLayout>
+						<Control/>
+						<HorizontalLayout>
+							<Label padding="25,0,0,0" text="无限制" font="1600" textcolor="#FFFFFFFF" align="left"/>
+							
+							
+							<Option 
+							selected="false"
+							name="6C014D3196C0" 
+							padding="0,0,80,0"							
+							width="62" 
+							height="20"
+							normalimage="file='images\system_configure_option_node.png' source='0,0,62,20' dest='0,0,0,0'"
+							selectedimage="file='images\system_configure_option_node.png' source='0,20,62,40' dest='0,0,0,0'"/>
+							
+							
+						</HorizontalLayout>
+						<Control/>
+						<HorizontalLayout>
+							<Label padding="25,0,0,0" text="下载速度限制" font="1600" textcolor="#FFFFFFFF" align="left"/>
+							
+							<Edit name="5E264C155710" 
+							text="4096"
+							padding="633,0,0,0"
+							width="60"
+							height="27"
+							borderround="5,5" 
+							font="1410" 
+							align="center" 
+							textpadding="6,0,6,0" 
+							nativebkcolor="#FF1D1F24" 
+							bkcolor="#FF1D1F24" textcolor="#FFFFFFFF" bordersize="1" 
+							bordercolor="FF979797"/>	
+							
+							<Label padding="15,0,0,0" text="kb/s (1-4096)" font="1410" textcolor="#FFFFFFFF" align="left"/>
+							
+							<Control/>
+							
+						</HorizontalLayout>	
+						<Control/>
+						
+					</VerticalLayout>
+
+					<Control height="10"/>
+					
+					<VerticalLayout bkcolor="#FF1D1F24" height="162">			
+						<Control/>
+						<HorizontalLayout>
+							<Label padding="25,0,0,0" text="应用下载后 :" font="1600" textcolor="#FFFFFFFF" align="left"/>
+							<Control/>
+						</HorizontalLayout>
+						<Control/>
+						<HorizontalLayout>
+							<Label padding="25,0,0,0" text="自动下载安装包至默认路径" font="1600" textcolor="#FFFFFFFF" align="left"/>
+							
+							<Option 
+							selected="false"
+							name="65157CA3603C" 
+							padding="0,0,80,0"							
+							width="62" 
+							height="20"
+							normalimage="file='images\system_configure_option_node.png' source='0,0,62,20' dest='0,0,0,0'"
+							selectedimage="file='images\system_configure_option_node.png' source='0,20,62,40' dest='0,0,0,0'"/>
+							
+							
+						</HorizontalLayout>
+						<Control/>
+						<HorizontalLayout>
+							<Label padding="25,0,0,0" text="应用安装后" font="1600" textcolor="#FFFFFFFF" align="left"/>
+							
+							<HorizontalLayout width="85">
+							<Option 
+							selected="true"
+							padding="0,5,0,0"
+							name="5A32C2448EDE"
+							group="FA067D5A7F76"
+							width="12"
+							height="12"
+							selectedimage="file='images/checkbox.png' source='0,0,12,12' dest='0,0,0,0'"
+							normalimage="file='images/checkbox.png' source='0,12,12,24' dest='0,0,0,0'"/>
+							<Label padding="6,0,0,0" text="保留7天" font="1200" textcolor="#FFFFFFFF" align="left"/>
+							</HorizontalLayout>
+							
+							<HorizontalLayout width="85">
+							<Option 
+							padding="0,5,0,0"
+							name="CB47D05B24DA"
+							group="FA067D5A7F76"
+							width="12"
+							height="12"
+							selectedimage="file='images/checkbox.png' source='0,0,12,12' dest='0,0,0,0'"
+							normalimage="file='images/checkbox.png' source='0,12,12,24' dest='0,0,0,0'"/>
+							<Label padding="6,0,0,0" text="保留15天" font="1200" textcolor="#FFFFFFFF" align="left"/>
+							</HorizontalLayout>
+														
+							<HorizontalLayout width="85">
+							<Option 
+							padding="0,5,0,0"
+							name="F6FD1E78D000"
+							group="FA067D5A7F76"
+							width="12"
+							height="12"
+							selectedimage="file='images/checkbox.png' source='0,0,12,12' dest='0,0,0,0'"
+							normalimage="file='images/checkbox.png' source='0,12,12,24' dest='0,0,0,0'"/>
+							<Label padding="6,0,0,0" text="永久保留" font="1200" textcolor="#FFFFFFFF" align="left"/>
+							</HorizontalLayout>
+
+							<Control width="60"/>
+						</HorizontalLayout>	
+						
+						<Control/>
+					
+					</VerticalLayout>
+
+					<Control height="10"/>
+					
+					<VerticalLayout bkcolor="#FF1D1F24" height="162">			
+						<VerticalLayout padding="22,0,0,0">
+							<Control height="22"/>
+							
+							<HorizontalLayout height="20">
+								<Label  text="定时关机 :" font="1600" textcolor="#FFFFFFFF" align="left"/>
+								<Control/>
+							</HorizontalLayout>
+							
+							<Control height="20"/>
+							
+							<HorizontalLayout height="20">
+								<Label text="下载完成后关机" font="1600" textcolor="#FFFFFFFF" align="left"/>
+								
+																
+								<Option 
+								selected="false"
+								name="279F1D194143" 
+								padding="0,0,80,0"							
+								width="62" 
+								height="20"
+								normalimage="file='images\system_configure_option_node.png' source='0,0,62,20' dest='0,0,0,0'"
+								selectedimage="file='images\system_configure_option_node.png' source='0,20,62,40' dest='0,0,0,0'"/>
+							</HorizontalLayout>
+							
+							<Control height="20"/>
+							
+							<HorizontalLayout height="20">
+								<Label text="设置关机时间" font="1600" textcolor="#FFFFFFFF" align="left"/>
+							
+							<Edit name="CFB31D6C9AF1" 
+							text="240"
+							padding="697,0,0,0"
+							width="60"
+							height="27"
+							borderround="5,5" 
+							font="1410" 
+							align="center" 
+							textpadding="6,0,6,0" 
+							nativebkcolor="#FF1D1F24" 
+							bkcolor="#FF1D1F24" textcolor="#FFFFFFFF" bordersize="1" 
+							bordercolor="FF979797"/>	
+							
+							<Label padding="9,0,0,0" text="分钟后关机" font="1410" textcolor="#FFFFFFFF" align="left"/>
+								
+								
+							<Option 
+							selected="false"
+							name="AB4C98E0ABDE" 
+							padding="0,0,80,0"							
+							width="62" 
+							height="20"
+							normalimage="file='images\system_configure_option_node.png' source='0,0,62,20' dest='0,0,0,0'"
+							selectedimage="file='images\system_configure_option_node.png' source='0,20,62,40' dest='0,0,0,0'"/>
+							
+							</HorizontalLayout>	
+
+							<Control/>
+						</VerticalLayout>
+					</VerticalLayout>
+					
+					
+				</VerticalLayout>
+				
+			</TabLayout>
+		</VerticalLayout>
+		
+	</VerticalLayout>
+	
+</Window>
