@@ -30,6 +30,7 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="uibase.cpp" />
+    <ClCompile Include="uiframework.cpp" />
     <ClCompile Include="wxuimain.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -38,6 +39,7 @@
     <ClInclude Include="Setup.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="uibase.h" />
+    <ClInclude Include="uiframework.h" />
     <ClInclude Include="wxuimain.h" />
   </ItemGroup>
   <ItemGroup>

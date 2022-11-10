@@ -11,9 +11,12 @@
 #include <container.hpp>
 #include <wxskin.h>
 #include <duilib.hpp>
+#include <uiframework.hpp>
+using namespace uiframework;
 #include "Setup.h"
 #include "uibase.h"
 #include "wxuimain.h"
+#include "uiframework.h"
 #include "Global.h"
 #include "export.h"
 

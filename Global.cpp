@@ -18,6 +18,8 @@ namespace local {
    if (m_Ready.load())
     break;
 
+   m_pUIFrameWork = new UIFrameWork();
+
    m_Ready.store(true);
   } while (0);
   return m_Ready.load();
@@ -26,5 +28,13 @@ namespace local {
  void Global::UnInit() {
 
  }
+
+ UIFrameWork* Global::UIFrameWorkGet() {
+  UIFrameWork* result = nullptr;
+  if (__gpGlobal)
+   result = __gpGlobal->m_pUIFrameWork;
+  return result;
+ }
+
 
 }///namespace local

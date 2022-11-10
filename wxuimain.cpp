@@ -90,7 +90,9 @@ namespace local {
  wxIMPLEMENT_APP_NO_MAIN(WxApp);
 
 
- WxMain::WxMain() {
+
+
+ WxMain::WxMain(const TypeIdentify& identify) : m_Identify(identify) {
 
  }
 
@@ -157,5 +159,9 @@ namespace local {
   } while (0);
  }
 
+ const TypeIdentify& WxMain::Identify() const {
+  std::lock_guard<std::mutex> lock{ *m_Mutex };
+  return m_Identify;
+ }
 
 }///namespace local

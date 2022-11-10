@@ -11,8 +11,11 @@ namespace local {
 		bool Init();
 	private:
 		void UnInit();
+	public:
+		static UIFrameWork* UIFrameWorkGet();
 	private:
 		std::atomic_bool m_Ready = false;
+		UIFrameWork* m_pUIFrameWork = nullptr;
 	};
 
 

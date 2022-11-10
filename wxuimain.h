@@ -3,13 +3,20 @@
 
 namespace local {
 
- class WxMain final : public UIBase {
+ class WxMain final : public IWxMain {
+  std::shared_ptr<std::mutex> m_Mutex = std::make_shared<std::mutex>();
  public:
-  WxMain();
+  WxMain(const TypeIdentify&);
   ~WxMain();
  public:
+  const TypeIdentify& Identify() const override final;
   void Create() override final;
   void Destory() override final;
+ private:
+  const TypeIdentify m_Identify;
+  std::atomic_bool m_IsOpen = false;
+  std::atomic_bool m_IsVisible = false;
+  HANDLE m_hUIMain = nullptr;
  };
 
 }///namespace local
