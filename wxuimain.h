@@ -3,7 +3,7 @@
 
 namespace local {
 
- class WxMain final : public IWxMain {
+ class WxMain final : public IUIMain {
   std::shared_ptr<std::mutex> m_Mutex = std::make_shared<std::mutex>();
  public:
   WxMain(const TypeIdentify&);
@@ -12,11 +12,13 @@ namespace local {
   const TypeIdentify& Identify() const override final;
   void Create() override final;
   void Destory() override final;
+  void Release() const override final;
  private:
   const TypeIdentify m_Identify;
   std::atomic_bool m_IsOpen = false;
   std::atomic_bool m_IsVisible = false;
   HANDLE m_hUIMain = nullptr;
+  static void OnAppClose();
  };
 
 }///namespace local

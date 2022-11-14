@@ -15,11 +15,14 @@
 using namespace uiframework;
 #include "Setup.h"
 #include "uibase.h"
+#include "winmain.h"
 #include "wxuimain.h"
 #include "uiframework.h"
 #include "Global.h"
 #include "export.h"
 
+#include <res/china.png.res.h>
+#include <res/logo.ico.res.h>
 /// /*新生®（上海）**/
 /// /*2022_09_07T01:06:39.5877592Z**/
 /// /*_ _ _ _ _ _ _ www.skstu.com _ _ _ _ _ _ _**/

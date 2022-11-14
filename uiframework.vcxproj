@@ -31,6 +31,7 @@
     </ClCompile>
     <ClCompile Include="uibase.cpp" />
     <ClCompile Include="uiframework.cpp" />
+    <ClCompile Include="winmain.cpp" />
     <ClCompile Include="wxuimain.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -40,6 +41,7 @@
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="uibase.h" />
     <ClInclude Include="uiframework.h" />
+    <ClInclude Include="winmain.h" />
     <ClInclude Include="wxuimain.h" />
   </ItemGroup>
   <ItemGroup>
@@ -155,8 +157,7 @@
       </Command>
     </PostBuildEvent>
     <PreBuildEvent>
-      <Command>
-      </Command>
+      <Command>call $(SolutionDir)..\..\compile\scripts\projects\PreBuildEvent_uiframework.bat</Command>
     </PreBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -186,8 +187,7 @@
       </Command>
     </PostBuildEvent>
     <PreBuildEvent>
-      <Command>
-      </Command>
+      <Command>call $(SolutionDir)..\..\compile\scripts\projects\PreBuildEvent_uiframework.bat</Command>
     </PreBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -227,8 +227,7 @@
       </Command>
     </PostBuildEvent>
     <PreBuildEvent>
-      <Command>
-      </Command>
+      <Command>call $(SolutionDir)..\..\compile\scripts\projects\PreBuildEvent_uiframework.bat</Command>
     </PreBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -265,8 +264,7 @@
       </Command>
     </PostBuildEvent>
     <PreBuildEvent>
-      <Command>
-      </Command>
+      <Command>call $(SolutionDir)..\..\compile\scripts\projects\PreBuildEvent_uiframework.bat</Command>
     </PreBuildEvent>
   </ItemDefinitionGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

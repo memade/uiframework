@@ -19,42 +19,48 @@ namespace local {
  }
 
  void UIFrameWork::UnInit() {
+  m_UIMainQ.iterate_clear(
+   [this](const auto&, auto& pUIObj, auto&, auto& itclear) {
+    pUIObj->Destory();
+  pUIObj->Release();
+  itclear = true;
+   });
  }
-
- bool UIFrameWork::Open() {
-  bool result = false;
-  do {
-
-
-   result = true;
-  } while (0);
-  return result;
- }
-
- void UIFrameWork::Close() {
-
- }
- IWxMain* UIFrameWork::CreateWxMain() {
-  IWxMain* result = nullptr;
+ IUIMain* UIFrameWork::CreateUIMain(const UIMainType& uitype) {
+  IUIMain* result = nullptr;
   std::lock_guard<std::mutex> lock{ *m_Mutex };
   auto identify = shared::Win::Time::TimeStamp<std::chrono::microseconds>();
-  auto pWxMain = new WxMain(identify);
-  m_WxMainQ.push(identify, pWxMain);
-  pWxMain->Create();
-  return dynamic_cast<IWxMain*>(pWxMain);
+  switch (uitype) {
+  case UIMainType::WINMAIN: {
+   result = new UIMain(identify);
+  }break;
+  case UIMainType::WXMAIN: {
+   result = new WxMain(identify);
+  }break;
+  case UIMainType::DUIMAIN: {
+
+  }break;
+  default:
+   break;
+  }
+  if (result) {
+   m_UIMainQ.push(identify, result);
+   result->Create();
+  }
+  return result;
  }
- void UIFrameWork::DestoryWxMain(uiframework::IWxMain*& wxmain) {
+ void UIFrameWork::DestoryUIMain(uiframework::IUIMain*& wxmain) {
   std::lock_guard<std::mutex> lock{ *m_Mutex };
   auto pDestoryObj = dynamic_cast<WxMain*>(wxmain);
   SK_DELETE_PTR(pDestoryObj);
   wxmain = nullptr;
  }
- void UIFrameWork::DestoryWxMain(const TypeIdentify& identify) {
+ void UIFrameWork::DestoryUIMain(const TypeIdentify& identify) {
   std::lock_guard<std::mutex> lock{ *m_Mutex };
-  m_WxMainQ.pop(identify, 
-   [&](const auto&,WxMain* pWxMain) {
+  m_UIMainQ.pop(identify,
+   [&](const auto&, IUIMain* pWxMain) {
     pWxMain->Destory();
-    SK_DELETE_PTR(pWxMain);
+  SK_DELETE_PTR(pWxMain);
    });
  }
 }///namespace lcoal

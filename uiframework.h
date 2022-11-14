@@ -10,16 +10,13 @@ namespace local {
  private:
   void Init();
   void UnInit();
- public:
-  bool Open();
-  void Close();
  protected:
-  IWxMain* CreateWxMain() override final;
-  void DestoryWxMain(uiframework::IWxMain*&) override final;
-  void DestoryWxMain(const TypeIdentify&) override final;
+  IUIMain* CreateUIMain(const UIMainType&) override final;
+  void DestoryUIMain(uiframework::IUIMain*&) override final;
+  void DestoryUIMain(const TypeIdentify&) override final;
  private:
   std::atomic_bool m_IsOpen = false;
-  shared::container::map<TypeIdentify, WxMain*> m_WxMainQ;
+  shared::container::map<TypeIdentify, IUIMain*> m_UIMainQ;
  };
 
 

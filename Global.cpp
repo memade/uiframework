@@ -26,7 +26,7 @@ namespace local {
  }
 
  void Global::UnInit() {
-
+  SK_DELETE_PTR(m_pUIFrameWork);
  }
 
  UIFrameWork* Global::UIFrameWorkGet() {
