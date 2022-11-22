@@ -36,5 +36,19 @@ namespace local {
   return result;
  }
 
-
+ const std::map<EnUIType, std::wstring> __mapMainWindowClassName = {
+  {EnUIType::Chromium,LR"(UIFrameWork Main Type - Chromium)"},
+  {EnUIType::DuiLib,LR"(UIFrameWork Main Type - DuiLib)"},
+  {EnUIType::DearImGui,LR"(UIFrameWork Main Type - DearImGui)"},
+  {EnUIType::Win32SDKMDI,LR"(UIFrameWork Main Type - Win32SDKMDI)"},
+  {EnUIType::Win32SDKSDI,LR"(UIFrameWork Main Type - Win32SDKSDI)"},
+  {EnUIType::WxWidgets,LR"(UIFrameWork Main Type - WxWidgets)"},
+ };
+ const std::map<EnUIChildType, std::wstring> __mapChildWindowClassName = {
+  {EnUIChildType::Chromium,LR"(UIFrameWork Child Type - Chromium)"},
+  {EnUIChildType::DearImGui,LR"(UIFrameWork Child Type - DearImGui)"},
+  {EnUIChildType::DuiLib,LR"(UIFrameWork Child Type - DuiLib)"},
+  {EnUIChildType::Win32,LR"(UIFrameWork Child Type - Win32)"},
+  {EnUIChildType::WxWidgets,LR"(UIFrameWork Child Type - WxWidgets)"},
+ };
 }///namespace local

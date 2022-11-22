@@ -18,6 +18,9 @@ namespace local {
 		UIFrameWork* m_pUIFrameWork = nullptr;
 	};
 
+	
+	extern const std::map<EnUIType, std::wstring> __mapMainWindowClassName;
+	extern const std::map<EnUIChildType, std::wstring> __mapChildWindowClassName;
 
 	extern Global* __gpGlobal;
 	extern Global* GlobalGet();

@@ -1,9 +1,17 @@
 ﻿#include "stdafx.h"
 
 namespace local {
- wxDECLARE_APP(shared::wx::IwxApp);
  // Notice use of wxIMPLEMENT_APP_NO_MAIN() instead of the usual wxIMPLEMENT_APP!
- wxIMPLEMENT_APP_NO_MAIN(shared::wx::IwxApp);
+ //wxIMPLEMENT_APP_NO_MAIN(shared::wx::IwxApp);
+
+ extern shared::wx::IwxApp& wxGetApp() { 
+  return *static_cast<shared::wx::IwxApp*>(wxApp::GetInstance());
+ }
+ wxAppConsole* wxCreateApp() {
+  wxAppConsole::CheckBuildOptions(WX_BUILD_OPTIONS_SIGNATURE,"my program");
+  return new shared::wx::IwxApp();
+ }
+ wxAppInitializer wxTheAppInitializer((wxAppInitializerFunction)wxCreateApp);
 
  WxMain::WxMain(const TypeIdentify& identify) : m_Identify(identify) {
 
@@ -91,9 +99,9 @@ namespace local {
   } while (0);
  }
 
- const TypeIdentify& WxMain::Identify() const {
+ IWindowConfig* WxMain::Config() const {
   std::lock_guard<std::mutex> lock{ *m_Mutex };
-  return m_Identify;
+  return nullptr;
  }
 
 }///namespace local

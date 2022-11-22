@@ -2,6 +2,7 @@
 
 namespace local {
  extern UIFrameWork* __gpUIFrameWork = nullptr;
+ UIFrameWork* UIFrameWorkGet() { return __gpUIFrameWork; }
 
  UIFrameWork::UIFrameWork() {
   Init();
@@ -22,29 +23,55 @@ namespace local {
   m_UIMainQ.iterate_clear(
    [this](const auto&, auto& pUIObj, auto&, auto& itclear) {
     pUIObj->Destory();
-  pUIObj->Release();
-  itclear = true;
+    pUIObj->Release();
+    itclear = true;
    });
+  for (auto it = m_WindowConfigQ.begin(); it != m_WindowConfigQ.end();) {
+   (*it)->Release();
+   it = m_WindowConfigQ.erase(it);
+  }
  }
- IUIMain* UIFrameWork::CreateUIMain(const UIMainType& uitype) {
+ IUIMain* UIFrameWork::SearchUIMain(const TypeIdentify& identify) {
   IUIMain* result = nullptr;
   std::lock_guard<std::mutex> lock{ *m_Mutex };
-  auto identify = shared::Win::Time::TimeStamp<std::chrono::microseconds>();
-  switch (uitype) {
-  case UIMainType::WINMAIN: {
-   result = new UIMain(identify);
-  }break;
-  case UIMainType::WXMAIN: {
-   result = new WxMain(identify);
-  }break;
-  case UIMainType::DUIMAIN: {
-
-  }break;
-  default:
-   break;
+  void(m_UIMainQ.search(identify,
+   [&](const auto&, auto& pMain) {
+    result = dynamic_cast<IUIMain*>(pMain);
+   }));
+  return result;
+ }
+ IWindowConfig* UIFrameWork::CreateWindowConfig() {
+  std::lock_guard<std::mutex> lock{ *m_Mutex };
+  return dynamic_cast<IWindowConfig*>(m_WindowConfigQ.emplace_back(new WindowConfig()));
+ }
+ IUIMain* UIFrameWork::CreateUIMain(IWindowConfig* pWindowConfig) {
+  IUIMain* result = nullptr;
+  std::lock_guard<std::mutex> lock{ *m_Mutex };
+  if (std::uint64_t(EnUIType::Win32SDKMDI) & std::uint64_t(pWindowConfig->UIType())) {
+   result = new UIMainMDI(dynamic_cast<WindowConfig*>(pWindowConfig));
   }
+#if 0
+  if (std::uint64_t(EnUIType::WinMDI) & std::uint64_t(pWindowConfig->UIType())) {
+   result = new UIMainMDI(dynamic_cast<WindowConfig*>(pWindowConfig));
+  }
+  else if (std::uint64_t(EnUIType::WxWidgets) & std::uint64_t(pWindowConfig->UIType())) {
+
+  }
+  else if (std::uint64_t(EnUIType::DearImGui) & std::uint64_t(pWindowConfig->UIType())) {
+
+  }
+  else if (std::uint64_t(EnUIType::DuiLib) & std::uint64_t(pWindowConfig->UIType())) {
+
+  }
+  else if (std::uint64_t(EnUIType::Default) & std::uint64_t(pWindowConfig->UIType())) {
+
+  }
+  else if (std::uint64_t(EnUIType::Chromium) & std::uint64_t(pWindowConfig->UIType())) {
+
+  }
+#endif
   if (result) {
-   m_UIMainQ.push(identify, result);
+   m_UIMainQ.push(pWindowConfig->Identify(), result);
    result->Create();
   }
   return result;
@@ -60,7 +87,7 @@ namespace local {
   m_UIMainQ.pop(identify,
    [&](const auto&, IUIMain* pWxMain) {
     pWxMain->Destory();
-  SK_DELETE_PTR(pWxMain);
+    SK_DELETE_PTR(pWxMain);
    });
  }
 }///namespace lcoal

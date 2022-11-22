@@ -9,7 +9,7 @@ namespace local {
   WxMain(const TypeIdentify&);
   ~WxMain();
  public:
-  const TypeIdentify& Identify() const override final;
+  IWindowConfig* Config() const override final;
   void Create() override final;
   void Destory() override final;
   void Release() const override final;
@@ -20,6 +20,9 @@ namespace local {
   HANDLE m_hUIMain = nullptr;
   static void OnAppClose();
  };
+
+ extern shared::wx::IwxApp& wxGetApp();
+ /*wxDECLARE_APP(shared::wx::IwxApp);*/
 
 }///namespace local
 

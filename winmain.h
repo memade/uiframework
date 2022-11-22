@@ -8,7 +8,7 @@ namespace local {
  public:
   UIMain(const TypeIdentify&);
  public:
-  const TypeIdentify& Identify() const override final;
+  IWindowConfig* Config() const override final;
   void Create() override final;
   void Destory() override final;
   void Release() const override final;

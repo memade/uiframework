@@ -1,6 +1,8 @@
 ﻿#include "stdafx.h"
 
 namespace local {
+ // Notice use of wxIMPLEMENT_APP_NO_MAIN() instead of the usual wxIMPLEMENT_APP!
+ //wxIMPLEMENT_APP_NO_MAIN(shared::wx::IwxApp);
 
  UIMain::UIMain(const TypeIdentify& identify) : m_Identify(identify) {
 
@@ -122,11 +124,23 @@ namespace local {
 #endif
   //switch (message) {
   //case WM_CREATE: {
-  // if (!wxEntryStart(__gpHinstance))
+  //// wxEntry(__gpHinstance);
+  // //wxEntryStart(__gpHinstance);
+  // //wxWindow* win = new wxWindow();
+  // //win->SetHWND((WXHWND)hWnd);
+  // //win->AdoptAttributesFromHWND();
+  // //if (!wxTheApp)
+  // // new shared::wx::IwxApp();
+  // //win->Reparent(wxTheApp->GetTopWindow());
+  // ////win->AddChild(new shared::wx::IMDIParentFrame(win));
+  // //win->Centre();
+
+
+  // /*if (!wxEntryStart(__gpHinstance))
   //  return FALSE;
 
   // if (!wxTheApp || !wxTheApp->CallOnInit())
-  //  return FALSE;
+  //  return FALSE;*/
   // //wxWindow* const w = wxTheApp->GetTopWindow();
 
   // //wxTheApp->SetExitOnFrameDelete(true);
@@ -212,10 +226,9 @@ namespace local {
    m_IsOpen.store(false);
   } while (0);
  }
-
- const TypeIdentify& UIMain::Identify() const {
+ IWindowConfig* UIMain::Config() const {
   std::lock_guard<std::mutex> lock{ *m_Mutex };
-  return m_Identify;
+  return nullptr;
  }
 
 

@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="dllmain.cpp" />
+    <ClCompile Include="export.cpp" />
+    <ClCompile Include="Global.cpp" />
+    <ClCompile Include="Setup.cpp" />
+    <ClCompile Include="stdafx.cpp" />
+    <ClCompile Include="uibase.cpp" />
+    <ClCompile Include="uiframework.cpp" />
+    <ClCompile Include="winmain.cpp" />
+    <ClCompile Include="wxuimain.cpp" />
+    <ClCompile Include="..\..\3rdparty\imgui\imgui.cpp">
+      <Filter>imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\3rdparty\imgui\imgui_demo.cpp">
+      <Filter>imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\3rdparty\imgui\imgui_draw.cpp">
+      <Filter>imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\3rdparty\imgui\imgui_tables.cpp">
+      <Filter>imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\3rdparty\imgui\imgui_widgets.cpp">
+      <Filter>imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="imuimain.cpp" />
+    <ClCompile Include="..\..\3rdparty\imgui\backends\imgui_impl_dx10.cpp">
+      <Filter>imgui\win32_dx10</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\3rdparty\imgui\backends\imgui_impl_win32.cpp">
+      <Filter>imgui\win32_dx10</Filter>
+    </ClCompile>
+    <ClCompile Include="window_config.cpp" />
+    <ClCompile Include="winmainmdi.cpp" />
+    <ClCompile Include="uichild.cpp" />
+    <ClCompile Include="window_child_config.cpp" />
+    <ClCompile Include="uichild_win32.cpp" />
+    <ClCompile Include="uichild_wxwidgets.cpp" />
+    <ClCompile Include="uichild_imgui_dx10.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="export.h" />
+    <ClInclude Include="Global.h" />
+    <ClInclude Include="Setup.h" />
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="uibase.h" />
+    <ClInclude Include="uiframework.h" />
+    <ClInclude Include="winmain.h" />
+    <ClInclude Include="wxuimain.h" />
+    <ClInclude Include="..\..\3rdparty\imgui\imconfig.h">
+      <Filter>imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\3rdparty\imgui\imgui.h">
+      <Filter>imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\3rdparty\imgui\imgui_internal.h">
+      <Filter>imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="imuimain.h" />
+    <ClInclude Include="..\..\3rdparty\imgui\backends\imgui_impl_dx10.h">
+      <Filter>imgui\win32_dx10</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\3rdparty\imgui\backends\imgui_impl_win32.h">
+      <Filter>imgui\win32_dx10</Filter>
+    </ClInclude>
+    <ClInclude Include="window_config.h" />
+    <ClInclude Include="winmainmdi.h" />
+    <ClInclude Include="uichild.h" />
+    <ClInclude Include="window_child_config.h" />
+    <ClInclude Include="uichild_win32.h" />
+    <ClInclude Include="uichild_wxwidgets.h" />
+    <ClInclude Include="uichild_imgui_dx10.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="uiframework.def" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="imgui">
+      <UniqueIdentifier>{83f4782e-62d1-47ae-a279-73199caaebbe}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="imgui\win32_dx10">
+      <UniqueIdentifier>{0b5ed4e0-7127-4df9-a7f5-a23436fa3b9e}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
