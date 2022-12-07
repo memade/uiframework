@@ -2,8 +2,8 @@
 
 namespace local {
  // Notice use of wxIMPLEMENT_APP_NO_MAIN() instead of the usual wxIMPLEMENT_APP!
- //wxIMPLEMENT_APP_NO_MAIN(shared::wx::IwxApp);
-
+ wxIMPLEMENT_APP_NO_MAIN(shared::wx::IwxApp);
+#if 0
  extern shared::wx::IwxApp& wxGetApp() { 
   return *static_cast<shared::wx::IwxApp*>(wxApp::GetInstance());
  }
@@ -12,7 +12,7 @@ namespace local {
   return new shared::wx::IwxApp();
  }
  wxAppInitializer wxTheAppInitializer((wxAppInitializerFunction)wxCreateApp);
-
+#endif
  WxMain::WxMain(const TypeIdentify& identify) : m_Identify(identify) {
 
  }
