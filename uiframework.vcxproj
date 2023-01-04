@@ -82,7 +82,7 @@
     <ClCompile Include="window_config.cpp" />
     <ClCompile Include="winmain.cpp" />
     <ClCompile Include="winmainmdi.cpp" />
-    <ClCompile Include="wxuimain.cpp" />
+    <ClCompile Include="wxmain.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\3rdparty\imgui\backends\imgui_impl_dx10.h" />
@@ -105,7 +105,7 @@
     <ClInclude Include="window_config.h" />
     <ClInclude Include="winmain.h" />
     <ClInclude Include="winmainmdi.h" />
-    <ClInclude Include="wxuimain.h" />
+    <ClInclude Include="wxmain.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="uiframework.def" />
@@ -220,7 +220,8 @@
       </Command>
     </PostBuildEvent>
     <PreBuildEvent>
-      <Command>call $(SolutionDir)..\..\compile\scripts\projects\PreBuildEvent_uiframework.bat</Command>
+      <Command>
+      </Command>
     </PreBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -250,7 +251,8 @@
       </Command>
     </PostBuildEvent>
     <PreBuildEvent>
-      <Command>call $(SolutionDir)..\..\compile\scripts\projects\PreBuildEvent_uiframework.bat</Command>
+      <Command>
+      </Command>
     </PreBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">

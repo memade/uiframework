@@ -26,7 +26,7 @@ using namespace uiframework;
 #include "winmain.h"
 #include "winmainmdi.h"
 #include "imuimain.h"
-#include "wxuimain.h"
+#include "wxmain.h"
 #include "uiframework.h"
 #include "Global.h"
 #include "export.h"

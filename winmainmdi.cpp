@@ -152,10 +152,7 @@ namespace local {
 
     OnRender();
 
-    if (m_hUIMainCreateEvent) {
-     ::SetEvent(m_hUIMainCreateEvent);
-     SK_CLOSE_HANDLE(m_hUIMainCreateEvent);
-    }
+    NotifyMainCreateEvent();
     std::this_thread::sleep_for(std::chrono::microseconds(10));
    } while (1);
 

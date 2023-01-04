@@ -11,7 +11,9 @@ namespace local {
  UIFrameWork::~UIFrameWork() {
   UnInit();
  }
-
+ void UIFrameWork::Release() const {
+  delete this;
+ }
  void UIFrameWork::Init() {
   do {
 
@@ -23,8 +25,8 @@ namespace local {
   m_UIMainQ.iterate_clear(
    [this](const auto&, auto& pUIObj, auto&, auto& itclear) {
     pUIObj->Destory();
-    pUIObj->Release();
-    itclear = true;
+  pUIObj->Release();
+  itclear = true;
    });
   for (auto it = m_WindowConfigQ.begin(); it != m_WindowConfigQ.end();) {
    (*it)->Release();
@@ -47,16 +49,25 @@ namespace local {
  IUIMain* UIFrameWork::CreateUIMain(IWindowConfig* pWindowConfig) {
   IUIMain* result = nullptr;
   std::lock_guard<std::mutex> lock{ *m_Mutex };
+  switch (pWindowConfig->UIType()) {
+  case EnUIType::WxWidgets: {
+   result = new WxMain(dynamic_cast<WindowConfig*>(pWindowConfig));
+  }break;
+  default: {
+   result = new UIMainMDI(dynamic_cast<WindowConfig*>(pWindowConfig));
+  }break;
+  }
+#if 0
   if (std::uint64_t(EnUIType::Win32SDKMDI) & std::uint64_t(pWindowConfig->UIType())) {
    result = new UIMainMDI(dynamic_cast<WindowConfig*>(pWindowConfig));
   }
-#if 0
+  else if (std::uint64_t(EnUIType::WxWidgets) & std::uint64_t(pWindowConfig->UIType())) {
+   auto sk = 0;
+  }
   if (std::uint64_t(EnUIType::WinMDI) & std::uint64_t(pWindowConfig->UIType())) {
    result = new UIMainMDI(dynamic_cast<WindowConfig*>(pWindowConfig));
   }
-  else if (std::uint64_t(EnUIType::WxWidgets) & std::uint64_t(pWindowConfig->UIType())) {
 
-  }
   else if (std::uint64_t(EnUIType::DearImGui) & std::uint64_t(pWindowConfig->UIType())) {
 
   }
@@ -78,8 +89,9 @@ namespace local {
  }
  void UIFrameWork::DestoryUIMain(uiframework::IUIMain*& wxmain) {
   std::lock_guard<std::mutex> lock{ *m_Mutex };
-  auto pDestoryObj = dynamic_cast<WxMain*>(wxmain);
-  SK_DELETE_PTR(pDestoryObj);
+  /*auto pDestoryObj = dynamic_cast<WxMain*>(wxmain);*/
+  /*SK_DELETE_PTR(pDestoryObj);*/
+  wxmain->Release();
   wxmain = nullptr;
  }
  void UIFrameWork::DestoryUIMain(const TypeIdentify& identify) {
@@ -87,7 +99,8 @@ namespace local {
   m_UIMainQ.pop(identify,
    [&](const auto&, IUIMain* pWxMain) {
     pWxMain->Destory();
-    SK_DELETE_PTR(pWxMain);
+  pWxMain->Release();
+  /*SK_DELETE_PTR(pWxMain);*/
    });
  }
 }///namespace lcoal

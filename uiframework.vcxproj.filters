@@ -9,7 +9,7 @@
     <ClCompile Include="uibase.cpp" />
     <ClCompile Include="uiframework.cpp" />
     <ClCompile Include="winmain.cpp" />
-    <ClCompile Include="wxuimain.cpp" />
+    <ClCompile Include="wxmain.cpp" />
     <ClCompile Include="..\..\3rdparty\imgui\imgui.cpp">
       <Filter>imgui</Filter>
     </ClCompile>
@@ -48,7 +48,7 @@
     <ClInclude Include="uibase.h" />
     <ClInclude Include="uiframework.h" />
     <ClInclude Include="winmain.h" />
-    <ClInclude Include="wxuimain.h" />
+    <ClInclude Include="wxmain.h" />
     <ClInclude Include="..\..\3rdparty\imgui\imconfig.h">
       <Filter>imgui</Filter>
     </ClInclude>

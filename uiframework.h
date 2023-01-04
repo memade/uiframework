@@ -7,6 +7,7 @@ namespace local {
  public:
   UIFrameWork();
   virtual ~UIFrameWork();
+  void Release() const override final;
  private:
   void Init();
   void UnInit();

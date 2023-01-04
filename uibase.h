@@ -26,6 +26,9 @@ namespace local {
   virtual void MainProcess() { return; }
   virtual void ShowControl();
   virtual void OnRender();
+  virtual bool NotifyMainCreateEvent();
+ protected:
+  void Center() const override {}
  protected:
   std::atomic_bool m_IsOpen = false;
   HANDLE m_hUIMain = nullptr;
